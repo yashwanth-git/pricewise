@@ -59,3 +59,15 @@ export async function getProductById(productId: string) {
     console.log(err);
   }
 }
+
+export async function getAllProducts() {
+  try {
+    connectToDB();
+
+    const products = await Product.find();
+
+    return products
+  } catch (err) {
+    console.log(err);
+  }
+}
