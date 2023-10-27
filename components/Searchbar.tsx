@@ -35,6 +35,7 @@ const Searchbar = () => {
 
       //Scrape Logic
       const product = await scrapeAndStoreProduct(searchPrompt)
+      console.log(product);
     } catch (err) {
       console.log(err);
     } finally {
